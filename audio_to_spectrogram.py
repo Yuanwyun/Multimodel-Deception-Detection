@@ -5,8 +5,8 @@ import os
 import matplotlib.pyplot as plt
 
 
-source_folder = "/home/DSO_SSD/ywy/Youtube_voice/"
-target_folder = "/home/DSO_SSD/ywy/Youtube_spectrogram/"
+source_folder = "path"
+target_folder = "path"
 
 for i in os.listdir(source_folder):
 
