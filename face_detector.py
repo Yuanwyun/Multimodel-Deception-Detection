@@ -4,15 +4,15 @@ import os
 
 print("\n\n\t\t\tPrecessing \n\n")
 
-save_dir = "/home/DSO_SSD/ywy/Youtube_faceframes/"
+save_dir = "/path/"
 
 tool = FaceAlignmentTools()
 
 
 
-for f_name in os.listdir("/home/DSO_SSD/Asian_Speaker/asian_speaker_15k/"):
+for f_name in os.listdir("path/"):
           
-    f_path = os.path.join("/home/DSO_SSD/Asian_Speaker/asian_speaker_15k/",f_name)
+    f_path = os.path.join("path",f_name)
     file_name = f_name.split('.')[0]
 
     num_frames = 0
