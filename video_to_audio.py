@@ -7,16 +7,16 @@ There is a bug with moviepy library. The chopped videos have incorrect meta-data
 So the audio is saved for 45 mins instead of 2 mins (43 mins of dummy values)
 """
 
-target_folder = "/home/DSO_SSD/ywy/Youtube_voice/"
+target_folder = "path"
 
 completed_files = os.listdir(target_folder)
 
 corrupted_files = []
 
 
-for f_name in os.listdir("/home/DSO_SSD/Asian_Speaker/asian_speaker_15k"):
+for f_name in os.listdir("path"):
 
-    f_path = os.path.join("/home/DSO_SSD/Asian_Speaker/asian_speaker_15k",f_name)
+    f_path = os.path.join("path",f_name)
     file_name = f_name.split('.')[0]
     save_name = target_folder + file_name + '.wav'
 
