@@ -6,12 +6,11 @@ import torch.nn as nn
 import torch
 from torch.utils.data import Dataset, DataLoader
 import torchvision.transforms as T
-
 from torchvision.io import read_image
 import torch.nn as nn
 import torchvision
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '1,2,3,4'
+os.environ['CUDA_VISIBLE_DEVICES'] = '1,2'
  
         
 class FSDATA(Dataset):
@@ -62,9 +61,9 @@ class FSDATA(Dataset):
         return face_frames.float(),image, label
     
 train_dataset = FSDATA(
-                    annotations_file="/home/DSO_SSD/ywy/train.csv", 
-                    spec_dir="/home/DSO_SSD/Zhaoxu/Cod/Dataset/BagOfLies/spectrograms/",
-                    img_dir="/home/DSO_SSD/Zhaoxu/Cod/Dataset/BagOfLies/CropFace_MTCNN/",
+                    annotations_file="path", 
+                    spec_dir="/spectrograms/",
+                    img_dir="CropFace_MTCNN/",
                     num_frames=64
                     )
 
@@ -199,12 +198,12 @@ def val_one_epoch(val_data_loader, model,loss_fn):
     return epoch_loss, acc
 
 
-annotations_file="/home/DSO_SSD/ywy/train1.csv"
-img_dir="/home/DSO_SSD/Zhaoxu/Cod/Dataset/BagOfLies/CropFace_MTCNN/"
-spec_dir="/home/DSO_SSD/Zhaoxu/Cod/Dataset/BagOfLies/spectrograms/"
+annotations_file="train1.csv"
+img_dir="CropFace_MTCNN/"
+spec_dir="spectrograms/"
 
 num_frames = 64
-fullpath ='/home/DSO_SSD/ywy/'
+fullpath ='path/'
 
 for P in protocols:
 
